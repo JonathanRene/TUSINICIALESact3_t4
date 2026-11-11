@@ -21,7 +21,10 @@ El proyecto está estructurado en capas limpias:
 ## 📷 Evidencias y Capturas de Pantalla
 
 ### 1. Entidades Relacionadas (Escuela y Alumno)
-*(Inserta aquí tu captura de la base de datos o de Postman donde se observe la relación)*
+<p align="center">
+  <b>Relación Escuela y Alumno en Postman</b><br>
+  <img src="./img/Captura%20de%20pantalla%202026-11-10%20195117.png" alt="Relación Escuela y Alumno" width="750">
+</p>
 
 ### 2. Operaciones del CRUD Funcionando
 - **Crear (POST):** Registro exitoso de escuelas y alumnos.
