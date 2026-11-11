@@ -1,0 +1,52 @@
+package com.jonathanrene.act3_t4.model;
+
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "escuelas")
+public class Escuela {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String nombre;
+
+    @Column(nullable = false)
+    private String direccion;
+
+    // Relación: Una escuela tiene muchos alumnos
+    @OneToMany(mappedBy = "escuela", cascade = CascadeType.ALL)
+    private List<Alumno> alumnos;
+
+    // Constructor vacío exigido por JPA
+    public Escuela() {}
+
+    public Escuela(String nombre, String direccion) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+    }
+
+    // --- GETTERS Y SETTERS ---
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+    
+    public List<Alumno> getAlumnos() { return alumnos; }
+    public void setAlumnos(List<Alumno> alumnos) { this.alumnos = alumnos; }
+}
