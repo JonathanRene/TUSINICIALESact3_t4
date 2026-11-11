@@ -1,4 +1,4 @@
-# Actividad 3: CRUD en Spring Boot con Relación @ManyToOne / @OneToMany
+# CRUD en Spring Boot y Relaciones (sin frontend separado)
 
 Proyecto desarrollado para la materia, implementando una API REST conectada a MySQL y desplegada en un servidor VPS Ubuntu.
 
